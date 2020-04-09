@@ -16,6 +16,8 @@ Including another URLconf
 
 # 
 
+from django.conf import settings
+from django.conf.url.static import static 
 
 from django.contrib import admin
 from django.urls import include, path
@@ -194,4 +196,4 @@ urlpatterns = [
     path('guardar-alarmasistemas/<int:id>/', views.guardar_alarmasistemas, name="actualizar_alarmasistemas"),
     path('alarmasistemas/<int:id>/eliminar/', views.eliminar_alarmasistemas, name="eliminar_alarmasistemas"),
     path('alarmasistemas/<int:id>/editar/', views.editar_alarmasistemas, name="editar_alarmasistemas"),
-] 
+] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
