@@ -17,6 +17,7 @@ Including another URLconf
 # 
 
 
+
 from django.contrib import admin
 from django.urls import include, path
 from myapp import views# se importan todas las vistas creadas por el usuario

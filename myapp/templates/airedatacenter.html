@@ -4,13 +4,12 @@
 
 {#div que contiene a toda la informacion de esta plantilla #}
  <div div class="container" >
-      
-      {#div que contiene a toda la informacion del formulario #}
-        <div  class="col-md-6 col-md-offset-3">
+    {#div que contiene a toda la informacion del formulario #}
+    <div  class="col-md-6 col-md-offset-3">
         <a href="{% url 'airedatacenterlista'  %}" ><span  class="glyphicon glyphicon-list"></a>
             {#div que contiene a toda la informacion para poder actualizar un registo #}
-            {% if idv %}
-             <h4 text align="center" style= "color: green"><b>Actualizar Aire</h4>
+        {% if idv %}
+            <h4 text align="center" style= "color: green"><b>Actualizar Aire</h4>
             <form action="{% url 'actualizar_airedatacenter' idv %}" method="post">
               {% csrf_token %}
                 <p ><strong style= "color: #537A51 ">Codígo del Aire:</strong>{{form.codaire}}</p> 
